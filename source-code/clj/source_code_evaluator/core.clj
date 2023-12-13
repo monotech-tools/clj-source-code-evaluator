@@ -6,7 +6,7 @@
 ;; ----------------------------------------------------------------------------
 
 (defn invoke
-  ; @warning
+  ; @important
   ; It's really sad, but the compiler cannot resolve functions like this :(
   ; This function is unavailable until the problem is resolved.
   ;
