@@ -7,10 +7,10 @@
 
 (defn invoke
   ; @description
-  ; Invokes the given 'function-name' as it is a symbol of a function.
+  ; Invokes the given 'function-name' as a symbol of a function.
   ;
   ; @param (string) function-name
-  ; @param (list of *) params
+  ; @param (list of *)(opt) params
   ;
   ; @usage
   ; (invoke "conj" [:a :b] :c)

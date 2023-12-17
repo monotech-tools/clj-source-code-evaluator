@@ -6,4 +6,5 @@
 ;; ----------------------------------------------------------------------------
 
 ; @redirect (source-code-evaluator.core/*)
+(def invoke   core/invoke)
 (def evaluate core/evaluate)
