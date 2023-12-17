@@ -5,5 +5,5 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @redirect (source-code-evaluator.core)
+; @redirect (source-code-evaluator.core/*)
 (def evaluate core/evaluate)
