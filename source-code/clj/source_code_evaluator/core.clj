@@ -45,7 +45,7 @@
    ; - Hot reload tools like Ring 'wrap-reload', redefines constants and functions in watched
    ;   namespaces when the code changes and it would cause name conflicts if the
    ;   'run-code!' function defined vars not only in a private scope.
-   (if (string/nonempty? source-code)
+   (if (string/not-empty? source-code)
        (letfn [(f0 [environment [var-name var-value]]
                    (str environment "(def ^{:private true} "var-name" "var-value")\n"))]
               (let [environment (reduce f0 nil env-vars)
