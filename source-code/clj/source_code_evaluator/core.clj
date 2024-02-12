@@ -25,6 +25,9 @@
 ;; ----------------------------------------------------------------------------
 
 (defn evaluate
+  ; @description
+  ; Evaluates the given source code and optionally provides environment variables.
+  ;
   ; @param (string) source-code
   ; @param (vectors in vector)(opt) env-vars
   ; [[(string) var-name
@@ -43,8 +46,8 @@
    ;   Therefore, the given environment variables must be defined with '{:private true}' setting
    ;   to prevent name conflicts in other namespaces (that also use the 'clojure.core' namespace).
    ; - Hot reload tools like Ring 'wrap-reload', redefines constants and functions in watched
-   ;   namespaces when the code changes and it would cause name conflicts if the
-   ;   'run-code!' function defined vars not only in a private scope.
+   ;   namespaces when the code changes and it would cause name conflicts if the 'run-code!' function
+   ;   defined vars not only in a private scope.
    (if (string/not-empty? source-code)
        (letfn [(f0 [environment [var-name var-value]]
                    (str environment "(def ^{:private true} "var-name" "var-value")\n"))]
